@@ -1,71 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome App</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayros</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
 
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+      .container {
+        text-align: center;
+      }
 
-        h1 {
-            color: #007BFF;
-            text-align: center;
-        }
+      h1 {
+        color: #ffffff;
+        font-size: 48px; 
+        margin-bottom: 10px;
+      }
+      .description {
+    color: #959595; /* Use a different shade of gray for the description */
+    font-size: 18px;
+    margin-bottom: 20px;  
+    margin-top: 10;/* Add some space between h1 and description */
+}
 
-        .store-links {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
 
-        .store-link {
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 5px;
-            color: #ffffff;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
+      .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+      }
 
-        .google-play {
-            background-color: #34A853;
-        }
+      .store-links {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
 
-        .app-store {
-            background-color: #007BFF;
-        }
+      .store-link img {
+        width: 75px;
+        height: 75px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        filter: grayscale(100%); 
+      }
 
-        .store-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+      .store-link img:hover {
+        transform: scale(1.1);
+      }
+
+      .space {
+        margin-right: 20px; /* Adds space to the right of the element */
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>Download Our Awesome App!</h1>
-        <div class="store-links">
-            <a class="store-link google-play" href="YOUR_PLAY_STORE_LINK" target="_blank">Google Play</a>
-            <a class="store-link app-store" href="YOUR_APP_STORE_LINK" target="_blank">App Store</a>
-        </div>
+      <!-- <img class="logo" src="irys_icon.png" alt="Your App Logo" /> -->
+      <h1>Kayros</h1>
+      <p class="description">Freedom of Expression</p>
+      <div class="store-links">
+        <a
+          class="store-link"
+          href="https://apps.apple.com/us/app/kayros/id6467042238"
+          target="_blank"
+        >
+          <img src="Google_play_store.png" alt="Play Store Icon" />
+        </a>
+        <div class="space"></div>
+        <div class="space"></div>
+        <a
+          class="store-link"
+          href="https://play.google.com/store/apps/details?id=com.theringalema.time_tracker"
+          target="_blank"
+        >
+          <img src="App_Store_(iOS).svg.png" alt="App Store Icon" />
+        </a>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
