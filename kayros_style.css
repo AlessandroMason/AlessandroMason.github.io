@@ -1,0 +1,131 @@
+body {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #090E1D;
+}
+
+nav {
+    overflow: hidden;
+    display: flex;
+    padding: 5px 5%;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+}
+
+nav .logo a {
+    text-decoration: none;
+}
+
+nav .logo a h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #818BA0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #BEC5D2;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li .active {
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+  
+.hamburger .line {
+    width: 25px;
+    height: 1.5px;
+    background-color: white;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transform: rotate(45deg);
+}
+  
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+  
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+  
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+  
+.menubar {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 20% 0;
+    background-color: #090E1D;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+}
+
+.active {
+    left: 0;
+}
+
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menubar ul li {
+    margin-bottom: 40px;
+    text-align: center;
+}
+  
+.menubar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.menubar ul li a:hover {
+    color: #818BA0;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+      display: block;
+    }
+    nav ul {
+      display: none;
+    }
+  }
