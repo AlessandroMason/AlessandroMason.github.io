@@ -139,7 +139,7 @@ Features
     align-items: center;
     padding: 80px 5%;
 }
-.features__content {
+.features__content__desktop {
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -156,19 +156,42 @@ Features
 }
 .features__content__text p {max-width: 450px; font-size: 20px; font-weight: 500; padding-top: 10px;}
 .features__content__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
     min-width: 230px;
     margin: 0px 20px;
     height: 100vh;
 }
 .features__content__img__item {
-    display: none;
+    position: absolute;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.features__content__img__item--active {display: block;}
+.features__mobile {display: none; flex-direction: column; gap: 150px;}
+.features__mobile__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 50px;
+    height: 90vh;
+    margin-top: 60px;
+}
+.features__mobile__item__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    overflow: hidden;
+}
+.features__mobile__item__img img {
+    height: 100%;
+}
+.features__mobile__item__text h3 {text-align: center; padding-bottom: 10px;}
+.features__mobile__item__text p {text-align: center; font-size: 18px; font-weight: 400; max-width: 500px; min-width: 230px; margin: 0px 30px;}
 
 /* -------------------------
 Outro
@@ -183,9 +206,9 @@ Outro
     height: 70vh;
     overflow-y: hidden;
 }
-.outro__title {text-align: center; padding-bottom: 60px;}
+.outro__title {text-align: center;}
 .outro__title h1 {width: fit-content;}
-.outro__img {max-width: 900px; min-width: 500px;}
+.outro__img {max-width: 900px; min-width: 500px; margin-top: 60px;}
 .outro__img img {width: 100%;}
 
 /* -------------------------
@@ -217,9 +240,8 @@ Smartphone
     .chart h1 {font-size: 32px;}
     .chart__img {margin: 0px 20px;}
 
-    .features__content{flex-direction: column;}
-    .features__content__text h3 {text-align: center;}
-    .features__content__text p{text-align: center;}
+    .features__content__desktop{display: none;}
+    .features__mobile {display: flex;}
 }
 
 /* -------------------------
@@ -232,9 +254,8 @@ Mid-screen
 
     .chart h1 {font-size: 34px;}
 
-    .features__content{flex-direction: column;}
-    .features__content__text h3 {text-align: center;}
-    .features__content__text p{text-align: center;}
+    .features__content__desktop{display: none;}
+    .features__mobile {display: flex;}
 }
 
 
