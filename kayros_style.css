@@ -1,35 +1,24 @@
 /* --------------------------
 Stile di base
 ----------------------------- */
-html {margin: 0; padding: 0; color: white;}
-h1, h2, h3, p, ul {margin: 0px;}
-h1 {
-    background: linear-gradient(to right, #fff 10%, #ffffff66 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-h2 {
-    background: linear-gradient(to right, #0048CE 0%, #0F67FE 70%, #78adefcf 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 46px;
-    text-align: center;
-}
+html {margin: 0; color: white; font-family: 'Inter', sans-serif; }
+body {margin: 0; background-color: #090E1D;}
+h1, h2, h3, h4, p, ul {margin: 0px;}
+p {font-size: 18px; max-width: 500px; font-weight: 500; color: #818ba0}
+h1 {font-size: 72px;}
+h2 {font-size: 52px; text-align: center;}
 h3 {font-size: 28px;}
-a {text-decoration: none;}
-body {
-    font-family: 'Inter', sans-serif;
-    padding: 0;
-    margin: 0;
-    background-color: #090E1D;
-}
+a {text-decoration: none; font-weight: 600;}
+b {font-weight: 500; color: white;}
+.download__btn {display: flex; gap: 20px; padding-top: 30px;}
+.download__btn__svg {width: 150px; height: 44px; border-radius: 5px; transition: all 0.3s linear;}
+.download__btn__svg:hover {background-color: #ffffff40;}
 
 /* -------------------------
 Navbar
 ---------------------------- */
 .nav {
+    width: 100%;
     overflow: hidden;
     display: flex;
     padding: 5px 5%;
@@ -38,17 +27,10 @@ Navbar
     height: 80px;
     z-index: 1;
 }
-.nav__logo {text-decoration: none;}
-.nav__logo h1 {color: white; font-size: 26px;}
-.nav__list {list-style: none; display: flex;}
-.nav__list__item {margin-left: 50px;}
-.nav__list__item a {
-    color: #818BA0;
-    font-size: 16px;
-    font-weight: 600;
-}
-.nav__list__item a:hover {color: #BEC5D2; transition: all 0.3s ease-in-out;}
-.nav__list__item--active a{color: white;}
+.nav__logo h4 {color: white; font-size: 26px;}
+.nav__list {list-style: none; display: flex; gap: 50px;}
+.nav__list__item a {color: #818BA0; font-size: 16px;}
+.nav__list__item a:hover {color: #DCE1E8; transition: all 0.3s linear;}
 /* ----------- Hamburger ----------- */
 .nav__hamburger {display: none; cursor: pointer;}
 .nav__hamburger__line {
@@ -81,12 +63,8 @@ Navbar
 .header__menubar--active {left: 0;}
 .header__menubar__list {padding: 0; list-style: none;}
 .header__menubar__list__item {margin-bottom: 40px; text-align: center;}
-.header__menubar__list__item a {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-}
-.header__menubar__list__item a:hover {color: #818BA0; transition: all 0.3s ease-in-out;}
+.header__menubar__list__item a {color: white; font-size: 18px;}
+.header__menubar__list__item a:hover {color: #DCE1E8; transition: all 0.3s linear;}
 
 /* -------------------------
 Cover
@@ -96,21 +74,11 @@ Cover
     align-items: center;
     justify-content: center;
     height: 90vh;
-    gap: 40px;
-    padding: 80px 5%;
+    gap: 60px;
+    padding: 80px 80px;
 }
-.cover__content__text h1 {
-    font-size: 68px;
-    min-width: fit-content;
-    white-space: nowrap;
-}
-.cover__content__text p {
-    font-size: 18px;
-    color: #BEC5D2;
-    max-width: 590px;
-    padding-top: 10px;
-}
-.cover__content__btn {display: flex; gap: 10px; padding-top: 30px;}
+.cover__content__text h1 {white-space: nowrap;}
+.cover__content__text p {padding-top: 10px;}
 .cover__img img {height: 550px;}
 
 /* -------------------------
@@ -119,14 +87,12 @@ Chart
 .chart {
     display: flex;
     padding: 80px 5%;
-    min-height: 90vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 60px;
 }
-.chart h1 {font-size: 42px; text-align: center;}
-.chart__img {margin: 0px 50px; max-width: 600px; min-width: 250px;}
+.chart__img {margin: 0px 50px; max-width: 700px; min-width: 250px;}
 .chart__img img{width: 100%;}
 
 /* -------------------------
@@ -137,12 +103,41 @@ Features
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 5%;
+    padding: 80px 5% 0px 5%;
 }
 .features__content__desktop {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 70px;
+}
+.features__content__img__frame {
+    position: absolute;
+    height: 600px;
+    z-index: 1;
+}
+.features__img__container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 600px;
+    overflow: hidden;
+}
+.features__content__img {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    min-width: 230px;
+    margin: 0px 20px;
+    height: 100vh;
+}
+.features__content__img__item {
+    position: absolute;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 }
 .features__content__description {
     display: flex;
@@ -155,37 +150,21 @@ Features
     justify-content: center;
 }
 .features__content__text p {max-width: 450px; font-size: 20px; font-weight: 500; padding-top: 10px;}
-.features__content__img {
-    position: relative;
-    overflow: hidden;
-    width: 300px;
-    min-width: 230px;
-    margin: 0px 20px;
-    height: 100vh;
-}
-.features__content__img__item {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.features__mobile {display: none; flex-direction: column; gap: 150px;}
+.features__mobile {display: none; flex-direction: column; gap: 80px}
 .features__mobile__item {
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
     gap: 50px;
-    height: 90vh;
-    margin-top: 60px;
+    min-height: 90vh;
 }
 .features__mobile__item__img {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0px 20px;
-    overflow: hidden;
+    height: 500px;
 }
 .features__mobile__item__img img {
     height: 100%;
@@ -199,23 +178,22 @@ Outro
 .outro {
     display: flex;
     flex-direction: column;
-    padding: 80px 5%;
+    padding: 80px 5% 0px 5%;
     align-items: center;
     justify-content: start;
     font-size: 28px;
-    height: 70vh;
-    overflow-y: hidden;
+    min-height: 70vh;
+    overflow: hidden;
 }
-.outro__title {text-align: center;}
-.outro__title h1 {width: fit-content;}
-.outro__img {max-width: 900px; min-width: 500px; margin-top: 60px;}
-.outro__img img {width: 100%;}
+.outro__title {width: fit-content; text-align: center; padding-bottom: 10px;}
+.outro__img {margin-top: 100px; height: 370px;}
+.outro__img img {width: 900px;}
 
 /* -------------------------
 Footer
 ---------------------------- */
-.footer {padding: 80px 60px 50px 60px;}
-.footer__section {display: flex; gap: 40px; align-items: center; justify-content: center; padding-bottom: 40px;}
+.footer {padding: 80px 5% 50px 5%;}
+.footer__section {display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; padding-bottom: 40px;}
 .footer__section a {
     color: #818BA0;
     font-size: 16px;
@@ -223,39 +201,118 @@ Footer
 }
 .footer__divider {border-top: 1px solid #3D4966; margin: 0px;}
 .footer__register {width: 100%; padding-top: 20px;}
-.footer__register p {font-size: 16px; font-weight: 300; color: #818BA0}
+.footer__register p {font-size: 12px; font-weight: 300; color: #818BA0}
+
+/* -------------------------
+Updates
+---------------------------- */
+.updates {padding: 80px 7% 80px 7%;}
+.card {max-width: 1000px; margin: auto; overflow-x: hidden; border-radius: 26px; border: 1px solid rgba(255, 255, 255, 0.102); box-shadow: 2px 5px 15px rgba(255, 255, 255, 0.081);}
+.card__img {height: 300px; overflow-y: hidden;}
+.card__img img {width: 100%;}
+.card__text {padding: 30px 7% 50px 7%;}
+.card__text h2 {text-align: left;}
+.card__text span {color: #818BA0; font-size: 14px;}
+.card__text p {color: #DCE1E8; padding-top: 10px; max-width: none;}
+
+/* -------------------------
+About Us
+---------------------------- */
+.aboutUs {padding: 80px 7% 80px 7%; display: flex; flex-direction: column; gap: 100px}
+.aboutUs h2 {margin: auto;}
+.whoWeAre {margin: auto;}
+.whoWeAre h1 {text-align: center;}
+.aboutUs__content {display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; padding-top: 30px;}
+.aboutUs__content img {width: 150px;}
+.aboutUs__text {padding-top: 15px;}
+.aboutUs__text h3 {text-align: center; padding-bottom: 10px; font-weight: 600; color: #DCE1E8; font-size: 24px;}
+.aboutUs__text p {max-width: 700px; margin: auto; text-align: center;}
+
+
+/* -------------------------
+Contact Us
+---------------------------- */
+.contactUs {padding: 80px 7% 80px 7%;}
+.contactUs h1 {text-align: center; padding-bottom: 30px;}
+.contact__name h4 {font-size: 28px; text-align: center;}
+.contact__name p {text-align: center; margin: auto;}
+.contact__info {display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; padding-top: 20px; margin: auto; max-width: fit-content;}
+.contact__card__text span {font-size: 18px; color: #DCE1E8; text-align: center;}
+.contact__card {max-width: 700px; padding: 25px 40px 25px 40px; border-radius: 26px; border: 1px solid rgba(255, 255, 255, 0.102); box-shadow: 2px 5px 15px rgba(255, 255, 255, 0.081);}
+.contact__card:hover {background-color: rgba(255, 255, 255, 0.137); transition: all 0.3s linear;}
 
 /* -------------------------
 Smartphone
 ---------------------------- */
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 450px) {
+    h1 {font-size: 36px; text-align: center; white-space: normal;}
+    h2 {font-size: 28px;}
+    p {font-size: 16px;}
+    .download__btn {justify-content: center;}
+    .download__btn__svg {width: 120px; height: 35px;}
+
+    .nav {height: 70px;}
     .nav__hamburger {display: block;}
     .nav__list {display: none;}
 
-    .cover{flex-direction: column; overflow: hidden; justify-content: start; padding-top: 30px;}
-    .cover__content__text h1 {font-size:48px; text-align: center; white-space: normal;}
-    .cover__content__text p {font-size: 16px; text-align: center; max-width: 430px;}
+    .cover{flex-direction: column; overflow-y: hidden; justify-content: start; padding: 50px 7vw; margin-bottom: 50px;}
+    .cover__content__text p {text-align: center; max-width: 430px;}
     .cover__content__btn {justify-content: center;}
 
-    .chart h1 {font-size: 32px;}
     .chart__img {margin: 0px 20px;}
 
+    .features__title {margin-bottom: 40px;}
     .features__content__desktop{display: none;}
     .features__mobile {display: flex;}
+
+    .outro__img img {width: 700px;}
+
+    .updates {padding: 30px 7% 50px 7%;}
+
+    .whoWeAre p {text-align: center;}
+}
+
+@media screen and (min-width: 450px) and (max-width: 880px) {
+    h1 {font-size: 48px; text-align: center; white-space: normal;}
+    h2 {font-size: 36px;}
+    p {font-size: 16px;}
+    .download__btn {justify-content: center;}
+
+    .nav {height: 70px;}
+    .nav__hamburger {display: block;}
+    .nav__list {display: none;}
+
+    .cover{flex-direction: column; overflow-y: hidden; justify-content: start; padding: 50px 7vw; margin-bottom: 50px;}
+    .cover__content__text p {text-align: center; max-width: 430px;}
+    .cover__content__btn {justify-content: center;}
+
+    .chart__img {margin: 0px 20px;}
+
+    .features__title {margin-bottom: 40px;}
+    .features__content__desktop{display: none;}
+    .features__mobile {display: flex;}
+
+    .outro__img img {width: 700px;}
+
+    .updates {padding: 50px 7% 50px 7%;}
 }
 
 /* -------------------------
 Mid-screen
 ---------------------------- */
-@media screen and (min-width: 760px) and (max-width: 900px) {
-    .cover__content__text h1 {font-size: 56px}
-    .cover__content__text p {font-size: 17px; max-width: 450px;}
+@media screen and (min-width: 880px) and (max-width: 1080px) {
+    h1 {font-size: 56px;}
+    h2 {font-size: 48px; max-width: 750px;}
+    p {font-size: 17px; max-width: 450px;}
+
     .cover__img img{height: 500px;}
 
-    .chart h1 {font-size: 34px;}
-
+    .features__title {margin-bottom: 40px;}
     .features__content__desktop{display: none;}
     .features__mobile {display: flex;}
+
+    .outro {padding-top: 160px;}
+    .outro__img {height: 320px;}
 }
 
 

@@ -11,58 +11,62 @@
     <title>Kayros</title>
 </head>
 <body>
-    <header class="header">
-      <nav class="nav">
-        <a href="#" class="nav__logo">
-          <h1>Kayros</h1>
-        </a>
-        <ul class="nav__list">
-            <li class="nav__list__item nav__list__items--active">
-              <a href="#">Home</a>
-            </li>
-            <li class="nav__list__item">
-              <a href="#">Updates</a>
-            </li>
-            <li class="nav__list__item">
-              <a href="#">About Us</a>
-            </li>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">
+        <h4>Kayros</h4>
+      </a>
+      <ul class="nav__list">
+          <li class="nav__list__item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="updates.html">Updates</a>
+          </li>
+          <li class="nav__list__item">
+            <a href="about_us.html">About Us</a>
+          </li>
+      </ul>
+      <div class="nav__hamburger">
+          <span class="nav__hamburger__line"></span>
+          <span class="nav__hamburger__line"></span>
+          <span class="nav__hamburger__line"></span>
+      </div>
+    </nav>
+    <div class="header__menubar">
+      <ul class="header__menubar__list">
+          <li class="header__menubar__list__item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="header__menubar__list__item">
+            <a href="updates.html">Updates</a>
+          </li>
+          <li class="header__menubar__list__item">
+            <a href="about_us.html">About Us</a>
+          </li>
         </ul>
-        <div class="nav__hamburger">
-            <span class="nav__hamburger__line"></span>
-            <span class="nav__hamburger__line"></span>
-            <span class="nav__hamburger__line"></span>
-        </div>
-      </nav>
-      <div class="header__menubar">
-        <ul class="header__menubar__list">
-            <li class="header__menubar__list__item">
-              <a href="#">Home</a>
-            </li>
-            <li class="header__menubar__list__item">
-              <a href="#">Updates</a>
-            </li>
-            <li class="header__menubar__list__item">
-              <a href="#">About Us</a>
-            </li>
-          </ul>
     </div>
-    </header>
+  </header>
 
     <section class="cover">
       <div class="cover__content">
         <div class="cover__content__text">
-          <h1>Elevate Your <br>Team Potential.</h1>
+          <h1 class="cover__content__title">Elevate Your<br>Team Potential.</h1>
           <p>
             Welcome to Kayros AI, the future of team productivity and individual performance. Our AI-driven platform is designed to transform 
             how teams collaborate and excel.
           </p>
         </div>
-        <div class="cover__content__btn">
-          <a href="">
-            <img src="img/app_store.png" alt="">
+        <div class="download__btn cover__btn">
+          <a href="https://apps.apple.com/it/app/kayros/id6467042238">
+            <div class="download__btn__svg">
+              <img src="img/download_app_store_logo.svg" alt="">
+            </div>
           </a>
-          <a href="">
-            <img src="img/play_store.png" alt="">
+          <a href="https://play.google.com/store/apps/details?id=com.theringalema.time_tracker&pcampaignid=web_share">
+            <div class="download__btn__svg">
+              <img src="img/download_play_store_logo.svg" alt="">
+            </div>
           </a>
         </div>
       </div>
@@ -72,32 +76,39 @@
     </section>
 
     <section class="chart">
-      <h1>We're not just enhancing productivity, <br>we're reinventing it.</h1>
+      <div class="title__h2">
+        <h2>We're not just enhancing productivity, <br>we're reinventing it.</h2>
+      </div>
       <div class="chart__img">
         <img src="img/charts.svg" alt="">
       </div>
     </section>
 
     <section class="features">
-      <h2>Discover all our features:</h2>
+      <h2 class="features__title">Next-Level Performance Starts Here.</h2>
       <div class="features__content__desktop">
         <div class="features__content__img">
-          <img class="features__content__img__item" src="img/main_page.svg" alt="">
-          <img class="features__content__img__item" src="img/adding_action.svg" alt="">
-          <img class="features__content__img__item" src="img/quality.svg" alt="">
-          <img class="features__content__img__item" src="img/main_page.svg" alt="">
+          <div class="features__img__container">
+            <img class="features__content__img__frame" src="img/iphone_frame.svg" alt="">
+            <div>
+              <img class="features__content__img__item" src="img/main_page_screen.svg" alt="">
+              <img class="features__content__img__item" src="img/adding_action_screen.svg" alt="">
+              <img class="features__content__img__item" src="img/quality_screen.svg" alt="">
+              <img class="features__content__img__item" src="img/main_page_screen.svg" alt="">
+            </div>
+          </div>
         </div>
         <div class="features__content__description">
           <div class="features__content__text">
             <h3>Custom AI Insights:</h3>
             <p>
-              Kayros AI personalizes feedback and suggestions, ensuring each team member’s unique strengths are recognized and nurtured.
+              Kayros AI personalizes feedback and suggestions, ensuring each team member’s <b>unique strengths</b> are recognized and nurtured.
             </p>
           </div>
           <div class="features__content__text">
             <h3>Performance Tracking:</h3>
             <p>
-              Detailed day tracking and graphical representations of activities help users optimize their time and foster strong habits.
+              Detailed day tracking and graphical representations of activities help users <b>optimize their time and foster strong habits</b>.
             </p>
           </div>
           <div class="features__content__text">
@@ -109,7 +120,7 @@
           <div class="features__content__text">
             <h3>Goal Setting:</h3>
             <p>
-              Customizable goals that adapt to your performance data, offering a balanced approach to work and rest.
+              Customizable goals that adapt to your performance data, offering a <b>balanced approach to work and rest</b>.
             </p>
           </div>
         </div>
@@ -123,7 +134,7 @@
           <div class="features__mobile__item__text">
             <h3>Custom AI Insights:</h3>
             <p>
-              Kayros AI personalizes feedback and suggestions, ensuring each team member’s unique strengths are recognized and nurtured.
+              Kayros AI personalizes feedback and suggestions, ensuring each team member’s <b>unique strengths</b> are recognized and nurtured.
             </p>
           </div>
         </div>
@@ -134,7 +145,7 @@
           <div class="features__mobile__item__text">
             <h3>Performance Tracking:</h3>
             <p>
-              Detailed day tracking and graphical representations of activities help users optimize their time and foster strong habits.
+              Detailed day tracking and graphical representations of activities help users <b>optimize their time and foster strong habits</b>.
             </p>
           </div>
         </div>
@@ -156,7 +167,7 @@
           <div class="features__mobile__item__text">
             <h3>Goal Setting:</h3>
             <p>
-              Customizable goals that adapt to your performance data, offering a balanced approach to work and rest.
+              Customizable goals that adapt to your performance data, offering a <b>balanced approach to work and rest</b>.
             </p>
           </div>
         </div>
@@ -165,12 +176,16 @@
 
     <section class="outro">
       <h1 class="outro__title">Elevate Your Team Potential.</h1>
-      <div class="cover__content__btn">
-        <a href="">
-          <img src="img/app_store.png" alt="">
+      <div class="download__btn outro__btn">
+        <a href="https://apps.apple.com/it/app/kayros/id6467042238">
+          <div class="download__btn__svg">
+            <img src="img/download_app_store_logo.svg" alt="">
+          </div>
         </a>
-        <a href="">
-          <img src="img/play_store.png" alt="">
+        <a href="https://play.google.com/store/apps/details?id=com.theringalema.time_tracker&pcampaignid=web_share">
+          <div class="download__btn__svg">
+            <img src="img/download_play_store_logo.svg" alt="">
+          </div>
         </a>
       </div>
       <div class="outro__img">
