@@ -173,19 +173,29 @@ Features
 .features__mobile__item__text p {text-align: center; font-size: 18px; font-weight: 400; max-width: 500px; min-width: 230px; margin: 0px 30px;}
 
 
-.get-started-btn {
+.button-container {
+    background-color: #343a40; /* Matching the dark background */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .get-started-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Blue */
+    background-color: #6c757d; /* Grey to match the theme */
     color: white;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0 10px; /* Space between buttons */
+    border: none; /* No border */
   }
   
   .get-started-btn:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #5a6268; /* Slightly darker on hover */
+    color: #f8f9fa; /* Keep the text color consistent */
   }
 /* -------------------------
 Outro
