@@ -133,12 +133,28 @@ Features
 }
 .features__content__img__item {
     position: absolute;
-    height: 600px;
+    height: 600px; /* Adjust as needed */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
 }
+
+.icon-container {
+    background-color: white;
+    padding: 200px; /* Increased padding for more space around the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; /* Increased radius for more rounding effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for prominence */
+}
+
+.icon-container img {
+    width: auto; /* Keep this so the image scales proportionally */
+    height: 300px; /* Increased height for better visibility */
+}
+
 .features__content__description {
     display: flex;
     flex-direction: column;
