@@ -1,32 +1,25 @@
 {
-  "applinks":{
-    "apps":[
-       
-    ],
-    "details":[
+  "applinks": {
+    "apps": [],
+    "details": [
       {
-        "appIDs":[
-          "com.example.kairosattendance"
+        "appIDs": [
+          "4URW4H9G9B.com.example.kairosattendance"
         ],
-        "components":[
+        "paths": [
+          "*"
+        ],
+        "components": [
           {
-            "/":"/login",
-            "comment":"Matches URL with a path /login"
-          },
-          {
-            "/":"/product/*",
-            "comment":"Matches any URL with a path that starts with /product/."
-          },
-          {
-            "/":"/secret",
-            "exclude":true,
-            "comment":"Matches URL with a path /secret and instructs the system not to open it as a universal link."
-          },
-          {
-            "/":"*"
-         }
+            "/": "/*"
+          }
         ]
       }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "4URW4H9G9B.com.example.kairosattendance"
     ]
   }
 }
