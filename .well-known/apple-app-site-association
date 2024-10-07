@@ -21,7 +21,10 @@
             "/":"/secret",
             "exclude":true,
             "comment":"Matches URL with a path /secret and instructs the system not to open it as a universal link."
-          }
+          },
+          {
+            "/":"*"
+         }
         ]
       }
     ]
