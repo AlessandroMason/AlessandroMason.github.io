@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kairos.attendance",
+      "sha256_cert_fingerprints":
+      ["88:BE:8E:F6:9F:EE:97:50:C6:1C:E2:5F:35:46:ED:02:D0:15:AD:41:23:AB:D0:4C:CA:85:A1:34:36:97:E3:83"]
+    }
+  }]
