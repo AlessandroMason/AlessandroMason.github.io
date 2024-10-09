@@ -6,8 +6,21 @@
         "appIDs": [
           "4URW4H9G9B.com.example.kairosattendance"
         ],
-        "paths": [
-          "/student/*" 
+        "components": [
+          {
+            "/": "/student/*",
+            "comment": "Matches any URL with a path that starts with /student/."
+          },
+          {
+            "#": "no_universal_links",
+            "exclude": true,
+            "comment": "Exclude links with this fragment from opening the app."
+          },
+          {
+            "/": "/student/:id",
+            "?": { "section": "*" },
+            "comment": "Matches any /student/:id path with a 'section' query parameter."
+          }
         ]
       }
     ]
