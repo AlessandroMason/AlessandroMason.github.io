@@ -34,3 +34,20 @@ function addAnimation() {
     });
   });
 }
+
+document.getElementById("download-btn").addEventListener("click", function() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // Controllo per iOS
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    window.location.href = "https://apps.apple.com/us/app/kairos-attendance/id6605920744"; // Inserisci il link all'App Store
+  }
+  // Controllo per Android
+  else if (/android/i.test(userAgent)) {
+    window.location.href = "https://play.google.com/store/apps/details?id=com.kairos.attendances"; // Inserisci il link a Google Play
+  }
+  // Altro sistema operativo
+  else {
+    window.location.href = "https://apps.apple.com/us/app/kairos-attendance/id6605920744"; // Inserisci il link alla pagina alternativa
+  }
+});

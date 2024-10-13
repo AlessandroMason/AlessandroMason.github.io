@@ -19,6 +19,53 @@ Cover
     height: 550px;
 }
 
+.cover__btn {
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    align-items: center;
+}
+
+.students__btn {
+    min-width: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.students__btn p, .teachers__btn p {
+    color: white;
+    font-weight: 500;
+}
+
+.students__btn:hover, .teachers__btn:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: all 0.3s linear;
+}
+
+.teachers__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 15px 30px;
+}
+
+.download__btn__svg {
+    width: 130px;
+    height: 38px;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+}
+
+.download__btn__svg:hover {
+    background-color: #ffffff40;
+}
+
 /* -------------------------
 Scroller
 ---------------------------- */

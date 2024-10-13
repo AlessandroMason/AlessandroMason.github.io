@@ -21,9 +21,6 @@ h1, h2 {
 h3 {font-size: 28px;}
 a {text-decoration: none; font-weight: 600;}
 b {font-weight: 500; color: white;}
-.download__btn {display: flex; gap: 20px; padding-top: 30px;}
-.download__btn__svg {width: 150px; height: 44px; border-radius: 5px; transition: all 0.3s linear;}
-.download__btn__svg:hover {background-color: #ffffff40;}
 .primary__gradient {
   background: -webkit-linear-gradient(#2EADA6 50%, #1b2850 100%);
   background-clip: text;

@@ -20,6 +20,10 @@
             "/": "/student/:id",
             "?": { "section": "*" },
             "comment": "Matches any /student/:id path with a 'section' query parameter."
+          },
+          {
+            "/": "/interesting/*",
+            "comment": "Matches any URL with a path that starts with /student/."
           }
         ]
       }

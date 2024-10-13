@@ -40,7 +40,7 @@ let tl_cover = gsap.timeline();
 tl_cover.from(".cover__content__text h1", {opacity: 0, y: 150, duration: 1, ease: "power1.inOut"})
 .from(".cover__content__text p", {opacity: 0, y: 150, duration: 0.7, ease: "power1.inOut"})
         .from(".cover__img", {opacity: 0, x: 250, duration: 0.7, ease: "power1.inOut"})
-        .from(".cover__btn a", {opacity: 0, y: 150, duration: 1, stagger: 0.3, ease: "power1.inOut"}, 1.7);
+        .from(".cover__btn", {opacity: 0, y: 150, duration: 1, stagger: 0.3, ease: "power1.inOut"}, 1.7);
 
 gsap.from(".features__title", {
     opacity: 0,

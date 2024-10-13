@@ -16,7 +16,12 @@ Smartphone
     .cover{flex-direction: column; overflow: hidden; justify-content: start; padding: 50px 5vw; margin-bottom: 50px;}
     .cover__content__text {max-width: 90vw;}
     .cover__content__text p {text-align: center;}
-    .cover__content__btn {justify-content: center;}
+    .cover__btn {
+        flex-direction: column;
+    }
+    .students__btn__links {
+        flex-direction: column;
+    }
 
     .mainFeatures__content {
         display: flex;
