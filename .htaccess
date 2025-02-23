@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^k4ros\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/web
+RewriteRule ^(.*)$ https://withkayros.com/$1 [R=301,L]
