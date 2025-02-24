@@ -51,3 +51,118 @@ document.getElementById("download-btn").addEventListener("click", function() {
     window.location.href = "https://apps.apple.com/us/app/kairos-attendance/id6605920744"; // Inserisci il link alla pagina alternativa
   }
 });
+
+
+const reviewsTrack = document.getElementById('reviewsTrack');
+
+let autoScrollInterval;
+let currentIndex = 0;
+let isPaused = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewsTrack = document.getElementById('reviewsTrack');
+
+
+  let autoScrollInterval;
+  let currentIndex = 0;
+  let isPaused = false;
+  let slideWidth = 0;
+
+  function initializeReviews() {
+      const reviewScrollers = document.querySelectorAll(".reviews-scroller");
+      
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          reviewScrollers.forEach((scroller) => {
+              scroller.setAttribute("data-animated", true);
+              
+              const scrollerInner = scroller.querySelector(".reviews-scroller__inner");
+              if (!scrollerInner) return;
+
+              const scrollerContent = Array.from(scrollerInner.children);
+              
+              // Clone items for infinite scroll
+              scrollerContent.forEach((item) => {
+                  const duplicatedItem = item.cloneNode(true);
+                  duplicatedItem.setAttribute("aria-hidden", true);
+                  scrollerInner.appendChild(duplicatedItem);
+              });
+          });
+          
+          // Calculate initial slide width
+          const firstCard = document.querySelector('.review-card');
+          if (firstCard) {
+              slideWidth = firstCard.offsetWidth + 32; // width + gap
+          }
+          
+          startAutoScroll();
+      }
+  }
+
+  function startAutoScroll() {
+      if (!isPaused && slideWidth > 0) {
+          reviewsTrack.classList.add('auto-scrolling');
+          const totalSlides = reviewsTrack.children.length;
+          
+          autoScrollInterval = setInterval(() => {
+              currentIndex = (currentIndex + 1) % totalSlides;
+              updateSlidePosition();
+          }, 5000); // Change slide every 5 seconds
+      }
+  }
+
+  function stopAutoScroll() {
+      clearInterval(autoScrollInterval);
+      reviewsTrack.classList.remove('auto-scrolling');
+  }
+
+  function updateSlidePosition() {
+      if (slideWidth > 0) {
+          const newPosition = -currentIndex * slideWidth;
+          reviewsTrack.style.transform = `translateX(${newPosition}px)`;
+      }
+  }
+
+  function handleManualNavigation(direction) {
+      stopAutoScroll();
+      isPaused = true;
+      
+      const totalSlides = reviewsTrack.children.length;
+      if (direction === 'prev') {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      } else {
+          currentIndex = (currentIndex + 1) % totalSlides;
+      }
+      
+      updateSlidePosition();
+      
+      // Resume auto-scroll after 10 seconds of inactivity
+      setTimeout(() => {
+          isPaused = false;
+          startAutoScroll();
+      }, 10000);
+  }
+
+
+
+  // Handle mouse interaction
+  reviewsTrack.addEventListener('mouseenter', () => {
+      stopAutoScroll();
+      isPaused = true;
+  });
+
+  reviewsTrack.addEventListener('mouseleave', () => {
+      isPaused = false;
+      startAutoScroll();
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+      const firstCard = document.querySelector('.review-card');
+      if (firstCard) {
+          slideWidth = firstCard.offsetWidth + 32;
+          updateSlidePosition();
+      }
+  });
+
+  // Initialize the reviews
+  initializeReviews();
+});

@@ -77,3 +77,6 @@ gsap.timeline({ repeat: -1 })  // repeat: -1 significa che il loop è infinito
     duration: 2,
     ease: "power2.in"
   });
+
+
+  
